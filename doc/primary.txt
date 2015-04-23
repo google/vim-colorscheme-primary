@@ -1,0 +1,88 @@
+﻿*primary.txt*	Primary color scheme based on Google's colors
+                                                                       primary
+
+==============================================================================
+CONTENTS
+  1. Introduction............................................. |primary-intro|
+  2. Configuration........................................... |primary-config|
+  3. Options................................................ |primary-options|
+  4. Color table........................................ |primary-color-table|
+
+==============================================================================
+INTRODUCTION                                                   *primary-intro*
+
+Primary is a Vim color scheme based on Google's colors. Primary contains
+settings for both light and dark backgrounds. Primary is fun, very readable,
+and Google-inspired.
+
+==============================================================================
+CONFIGURATION                                                 *primary-config*
+
+Download primary.vim and copy it into your .vim/colors directory.
+
+To set Primary as your default color scheme, add these lines to your .vimrc
+file: >
+  syntax enable
+  set t_Co=256
+  set background=light
+  colorscheme primary
+<
+To use Primary in dark mode, change the third line to  set background=dark.
+
+If the line  set t_Co=256  is causing an error, this means your terminal
+does not support 256 colors. No problem - just remove that line and consult
+|primary-color-table|.
+
+==============================================================================
+OPTIONS                                                      *primary-options*
+
+To test out the color scheme without making it default, type
+  :colorscheme primary
+from inside Vim. (Make sure primary.vim is already in your .vim/colors
+directory.)
+
+To have different color schemes or background settings for gVim (gui
+running) and console Vim, you can edit your .vimrc to have something like >
+  if has('gui_running')
+    set background=light
+    colorscheme primary
+  else
+    set background=dark
+    colorscheme primary
+  endif
+<
+
+To switch from light to dark mode within Vim, type
+  :set background=dark
+(or :set background=light to switch the other way) and then reload the color
+scheme with
+  :colorscheme primary
+
+==============================================================================
+COLOR TABLE                                              *primary-color-table*
+
+In console Vim (not gVim), if the terminal does not support 256 colors, then
+the color parameters cannot with be set with precise color codes. They can
+only be set with color names (like "green"). This means the color scheme might
+not show up with the exact Google colors (depending on what shade your
+terminal assigns to "green"). To make the color scheme appear with precisely
+Google's colors, edit the terminal color settings as follows.
+
+On Ubuntu: right-click on a terminal window -> Profiles -> Profile
+Preferences -> Colors.
+On Mac: click the Terminal menu -> Preferences.
+(On other platforms, the steps may differ slightly.)
+
+Modify the color settings according to the following table:
+
+                           Palette Entry
+  Color Name | RGB Value | Ubuntu (Mac)
+  --------------------------------------
+  black      | #000000   |    1   (0)
+  white      | #FFFFFF   |    8  (15)
+  darkgrey   | #656565   |    9   (8)
+  red        | #DB4437   |   10   (9)
+  green      | #0F9D58   |   11  (10)
+  yellow     | #F4B400   |   12  (11)
+  blue       | #4285F4   |   13  (12)
+  grey       | #EEEEEE   |   16   (7)
