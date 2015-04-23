@@ -18,7 +18,11 @@ and Google-inspired.
 ==============================================================================
 CONFIGURATION                                                 *primary-config*
 
-Download primary.vim and copy it into your .vim/colors directory.
+Download primary.vim (in the colors folder) and copy it into your .vim/colors
+directory.
+
+(If you're not familiar with pulling from a Git repository, you can download
+the file from http://www.vim.org/scripts/script.php?script_id=5160)
 
 To set Primary as your default color scheme, add these lines to your .vimrc
 file: >
