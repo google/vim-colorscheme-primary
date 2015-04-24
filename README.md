@@ -1,10 +1,12 @@
-Primary - a Vim color scheme based on Google's colors
+## Primary
+### a Vim color scheme based on Google's colors
+
 
 ![Light mode](/screenshots/light.png?raw=true)
 ![Dark mode](/screenshots/dark.png?raw=true)
 
 
-Where to start?
+### Where to start?
 
 1. Follow the installation instructions in doc/primary.txt. The color scheme
    file is in colors/primary.vim.
@@ -13,6 +15,5 @@ Where to start?
 
 3. Want to contribute? See CONTRIBUTING.md for instructions.
 
-
-Disclaimer: This is not an official Google product (experimental or otherwise),
-it is just code that happens to be owned by Google.
+*Disclaimer: This is not an official Google product (experimental or otherwise),
+it is just code that happens to be owned by Google.*
