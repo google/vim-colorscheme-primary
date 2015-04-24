@@ -1,19 +1,29 @@
 ## Primary
-### a Vim color scheme based on Google's colors
+#### A Vim color scheme based on Google's colors
 
+### Screenshots
 
 ![Light mode](/screenshots/light.png?raw=true)
 ![Dark mode](/screenshots/dark.png?raw=true)
 
 
-### Where to start?
+### Installation
 
-1. Follow the installation instructions in doc/primary.txt. The color scheme
-   file is in colors/primary.vim.
+Download primary.vim (in the colors folder) and copy it into your .vim/colors
+directory.
 
-2. Use your Primary-themed Vim to write lots of Google-inspired code!
+To set Primary as your default color scheme, add these lines to your .vimrc
+file:
+```
+  syntax enable
+  set t_Co=256
+  set background=light
+  colorscheme primary
+```
+To use Primary in dark mode, change the third line to `set background=dark`.
 
-3. Want to contribute? See CONTRIBUTING.md for instructions.
+For more detailed instructions, see doc/primary.txt.
+
 
 *Disclaimer: This is not an official Google product (experimental or otherwise),
 it is just code that happens to be owned by Google.*
