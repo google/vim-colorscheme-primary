@@ -37,6 +37,11 @@ If the line  set t_Co=256  is causing an error, this means your terminal
 does not support 256 colors. No problem - just remove that line and consult
 |primary-color-table|.
 
+If you want to disable italic font, add this line to your .vimrc.
+file: >
+  let g:colorscheme_primary_disable_italic = 1
+<
+
 ==============================================================================
 OPTIONS                                                      *primary-options*
 
