@@ -68,8 +68,8 @@ else                     "Console Vim
   let s:M = "cterm"
   let s:I = "none"
   let s:terms=["rxvt", "gnome-terminal"]
-  for term in s:terms
-    if $TERM_PROGRAM =~ term
+  for s:term in s:terms
+    if $TERM_PROGRAM =~ s:term
       let s:I = "italic"
     endif
   endfor
