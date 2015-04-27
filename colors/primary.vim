@@ -24,7 +24,8 @@ hi clear
 if exists('syntax_on')
   syntax reset
 endif
-let g:colors_name='primary'
+let g:colors_name = 'primary'
+let s:disable_italic = get(g:,'colorscheme_primary_disable_italic', 0)
 
 if (has("gui_running"))  "Graphical Vim
   "Set color palette with RGB colors
@@ -39,7 +40,7 @@ if (has("gui_running"))  "Graphical Vim
 
   "Set gui mode and italics
   let s:M = "gui"
-  let s:I = "italic"
+  let s:I = s:disable_italic ? 'none' : 'italic'
 
 else                     "Console Vim
   if &t_Co == 256
@@ -67,12 +68,14 @@ else                     "Console Vim
   "Set terminal mode and italics (if supported)
   let s:M = "cterm"
   let s:I = "none"
-  let s:terms=["rxvt", "gnome-terminal"]
-  for term in s:terms
-    if $TERM_PROGRAM =~ term
-      let s:I = "italic"
-    endif
-  endfor
+  if !s:disable_italic
+    let s:terms = ["rxvt", "gnome-terminal"]
+    for s:term in s:terms
+      if $TERM_PROGRAM =~ s:term
+        let s:I = "italic"
+      endif
+    endfor
+  endif
 
 endif
 
