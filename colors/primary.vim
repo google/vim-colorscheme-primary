@@ -24,7 +24,8 @@ hi clear
 if exists('syntax_on')
   syntax reset
 endif
-let g:colors_name='primary'
+let g:colors_name = 'primary'
+let s:disable_italic = get(g:,'colorscheme_primary_disable_italic', 0)
 
 if (has('gui_running'))  "Graphical Vim
   "Set color palette with RGB colors
@@ -39,7 +40,7 @@ if (has('gui_running'))  "Graphical Vim
 
   "Set gui mode and italics
   let s:M = 'gui'
-  let s:I = 'italic'
+  let s:I = s:disable_italic ? 'none' : 'italic'
 
 else                     "Console Vim
   if &t_Co == 256
@@ -67,12 +68,14 @@ else                     "Console Vim
   "Set terminal mode and italics (if supported)
   let s:M = 'cterm'
   let s:I = 'none'
-  let s:terms=['rxvt', 'gnome-terminal']
-  for s:term in s:terms
-    if $TERM_PROGRAM =~ s:term
-      let s:I = 'italic'
-    endif
-  endfor
+  if !s:disable_italic
+    let s:terms = ['rxvt', 'gnome-terminal']
+    for s:term in s:terms
+      if $TERM_PROGRAM =~ s:term
+        let s:I = 'italic'
+      endif
+    endfor
+  endif
 
 endif
 
@@ -140,14 +143,14 @@ exe 'hi WildMenu     '.s:M.'bg='.s:YELLOW.' '.s:M.'fg='.s:BG .' '.s:M.'=none'
 exe 'hi DiffAdd      '.s:M.'bg='.s:BLUE .' '.s:M.'fg='.s:GREY0.' '.s:M.'=none'
 exe 'hi DiffChange   '.s:M.'bg='.s:GREEN.' '.s:M.'fg='.s:GREY0.' '.s:M.'=none'
 exe 'hi DiffDelete   '.s:M.'bg='.s:RED  .' '.s:M.'fg='.s:GREY0.' '.s:M.'=none'
-exe 'hi DiffText     '.s:M.'bg='.s:GREY1.' '.s:M.'fg='.'none'.'  '.s:M.'=none'
+exe 'hi DiffText     '.s:M.'bg='.s:GREY1.' '.s:M.'fg='.'NONE'.'  '.s:M.'=none'
 
 
 " Colors for the User Interface.
 exe 'hi Cursor       '.s:M.'bg='.s:GREY1.' '.s:M.'fg='.s:BG   .' '.s:M.'=bold'
 exe 'hi Search       '.s:M.'bg='.s:YELLOW.' '.s:M.'fg='.s:BG  .' '.s:M.'=none'
 exe 'hi IncSearch    '.s:M.'bg='.s:YELLOW.' '.s:M.'fg='.s:BG  .' '.s:M.'=none'
-exe 'hi ColorColumn  '.s:M.'bg='.s:GREY2.' '.s:M.'fg='.'none' .' '.s:M.'=none'
+exe 'hi ColorColumn  '.s:M.'bg='.s:GREY2.' '.s:M.'fg='.'NONE' .' '.s:M.'=none'
 exe 'hi SignColumn   '.s:M.'bg='.s:GREY2.' '.s:M.'fg='.s:YELLOW.' '.s:M.'=none'
 
 exe 'hi WarningMsg   '.s:M.'bg='.s:BG   .' '.s:M.'fg='.s:RED  .' '.s:M.'=bold'
@@ -166,7 +169,7 @@ exe 'hi PmenuSBar    '.s:M.'bg='.s:GREY2.' '.s:M.'fg='.s:GREY0.' '.s:M.'=none'
 exe 'hi PmenuThumb   '.s:M.'bg='.s:GREY0.' '.s:M.'fg='.s:BG   .' '.s:M.'=none'
 
 if (has('gui_running') || &t_Co == 256)
-  exe 'hi Visual       '.s:M.'bg='.s:GREY2.' '.s:M.'fg='.'none' .' '.s:M.'=none'
+  exe 'hi Visual       '.s:M.'bg='.s:GREY2.' '.s:M.'fg='.'NONE' .' '.s:M.'=none'
   exe 'hi Pmenu        '.s:M.'bg='.s:GREY2.' '.s:M.'fg='.s:GREY0.' '.s:M.'=none'
   exe 'hi Linenr       '.s:M.'bg='.s:GREY2.' '.s:M.'fg='.s:GREY1.' '.s:M.'=none'
   exe 'hi VertSplit    '.s:M.'bg='.s:GREY1.' '.s:M.'fg='.s:GREY2.' '.s:M.'=none'
@@ -184,7 +187,7 @@ else
     let s:GREYX = s:GREY1
     let s:GREYY = s:BLACK
   endif
-  exe 'hi Visual       '.s:M.'bg='.s:GREYY.' '.s:M.'fg='.'none' .' '.s:M.'=none'
+  exe 'hi Visual       '.s:M.'bg='.s:GREYY.' '.s:M.'fg='.'NONE' .' '.s:M.'=none'
   exe 'hi Pmenu        '.s:M.'bg='.s:GREYY.' '.s:M.'fg='.s:GREYX.' '.s:M.'=none'
   exe 'hi Linenr       '.s:M.'bg='.s:GREYX.' '.s:M.'fg='.s:GREYY.' '.s:M.'=none'
   exe 'hi VertSplit    '.s:M.'bg='.s:GREYX.' '.s:M.'fg='.s:GREYY.' '.s:M.'=none'
