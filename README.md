@@ -9,19 +9,30 @@
 
 #### Installation
 
-Download colors/primary.vim and copy it into your .vim/colors directory.
+Install using your favorite plugin manager.
 
-To set Primary as your default color scheme, add these lines to your .vimrc
-file:
+To install using Vundle, add the following to your vimrc:
+```vim
+Plugin google/vim-colorscheme-primary
 ```
-  syntax enable
-  set t_Co=256
-  set background=light
-  colorscheme primary
-```
-For dark mode, change the third line to `set background=dark`.
 
-See doc/primary.txt for detailed instructions and additional options.  
+To set Primary as your default color scheme, add these lines to your .vimrc:
+```vim
+syntax enable
+set t_Co=256
+set background=light
+colorscheme primary
+```
+For dark mode, use `set background=dark` instead:
+```vim
+syntax enable
+set t_Co=256
+set background=dark
+colorscheme primary
+```
+
+See doc/colorscheme-primary.txt for detailed instructions and additional
+options.
 
 #### Happy Google-inspired coding!  
 
