@@ -47,10 +47,10 @@ else                     "Console Vim
     "Set color palette with 256 colors
     "Numerically closest are RED 167, GREEN 71, YELLOW 220, and BLUE 69
     "Visually closest values are used instead
-    let s:RED    = '160'
-    let s:GREEN  = '28'
-    let s:YELLOW = '214'
-    let s:BLUE   = '33'
+    let s:RED    = '167'
+    let s:GREEN  = '71'
+    let s:YELLOW = '220'
+    let s:BLUE   = '69'
     let s:BLACK  = '16'
     let s:DGREY  = '241'
     let s:LGREY  = '255'
