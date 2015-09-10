@@ -45,8 +45,6 @@ if (has('gui_running'))  "Graphical Vim
 else                     "Console Vim
   if &t_Co == 256
     "Set color palette with 256 colors
-    "Numerically closest are RED 167, GREEN 71, YELLOW 220, and BLUE 69
-    "Visually closest values are used instead
     let s:RED    = '167'
     let s:GREEN  = '71'
     let s:YELLOW = '220'
