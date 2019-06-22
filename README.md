@@ -13,7 +13,7 @@ Install using your favorite plugin manager.
 
 To install using Vundle, add the following to your vimrc:
 ```vim
-Plugin google/vim-colorscheme-primary
+Plugin 'google/vim-colorscheme-primary'
 ```
 
 To set Primary as your default color scheme, add these lines to your .vimrc:
