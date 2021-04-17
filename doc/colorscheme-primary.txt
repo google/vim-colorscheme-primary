@@ -87,13 +87,13 @@ Modify the color settings according to the following table:
                            Palette Entry
   Color Name | RGB Value | Ubuntu (Mac)
   --------------------------------------
-  black      | #000000   |    1   (0)
+  black      | #202124   |    1   (0)
   white      | #FFFFFF   |    8  (15)
-  darkgrey   | #656565   |    9   (8)
-  red        | #DB4437   |   10   (9)
-  green      | #0F9D58   |   11  (10)
-  yellow     | #F4B400   |   12  (11)
+  darkgrey   | #5F6368   |    9   (8)
+  red        | #5F6368   |   10   (9)
+  green      | #34A853   |   11  (10)
+  yellow     | #FBBC04   |   12  (11)
   blue       | #4285F4   |   13  (12)
-  grey       | #EEEEEE   |   16   (7)
+  grey       | #FBBC04   |   16   (7)
 
 vim:tw=78:ts=8:ft=help:norl:
