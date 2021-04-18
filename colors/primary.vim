@@ -17,7 +17,6 @@
 "Description:  A Vim color scheme based on Google's colors
 "Author:       Lisie Michel
 "Created:      2015 March 20
-"Modified:     2015 September 1
 "GitHub:       https://github.com/google/vim-colorscheme-primary
 
 hi clear

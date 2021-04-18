@@ -1,5 +1,5 @@
-﻿*colorscheme-primary.txt*	Primary color scheme based on Google's colors
-                               *colorscheme-primary.txt* *colorscheme-primary*
+*colorscheme-primary.txt*	Primary color scheme based on Google's colors
+                                                         *colorscheme-primary*
 
 ==============================================================================
 CONTENTS                                        *colorscheme-primary-contents*
@@ -38,6 +38,7 @@ If the line  set t_Co=256  is causing an error, this means your terminal
 does not support 256 colors. No problem - just remove that line and consult
 |colorscheme-primary-color-table|.
 
+                                        *g:colorscheme_primary_disable_italic*
 If you want to disable italic font, add this line to your .vimrc: >
   let g:colorscheme_primary_disable_italic = 1
 <
@@ -45,8 +46,9 @@ If you want to disable italic font, add this line to your .vimrc: >
 ==============================================================================
 OPTIONS                                          *colorscheme-primary-options*
 
-To test out the color scheme without making it default, type
+To test out the color scheme without making it default, type >
   :colorscheme primary
+<
 from inside Vim. (Make sure the plugin is already installed.)
 
 To have different color schemes or background settings for gVim (gui
