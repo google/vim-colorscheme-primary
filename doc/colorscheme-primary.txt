@@ -42,6 +42,10 @@ does not support 256 colors. No problem - just remove that line and consult
 If you want to disable italic font, add this line to your .vimrc: >
   let g:colorscheme_primary_disable_italic = 1
 <
+                                        *g:colorscheme_primary_enable_transparent_bg*
+If you want to enable background transparency, add this line to your .vimrc: >
+  let g:colorscheme_primary_enable_transparent_bg = 1
+<
 
 ==============================================================================
 OPTIONS                                          *colorscheme-primary-options*
