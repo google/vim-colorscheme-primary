@@ -27,7 +27,7 @@ let g:colors_name = 'primary'
 let s:disable_italic = get(g:,'colorscheme_primary_disable_italic', 0)
 let s:enable_transparent_bg = get(g:,'colorscheme_primary_enable_transparent_bg', 0)
 
-if has('gui_running') || has('termguicolors')  "Graphical Vim
+if has('gui_running') || (has('termguicolors') && &termguicolors)  "Graphical Vim
   "Set color palette with RGB colors
   let s:RED    = '#EA4335'
   let s:GREEN  = '#34A853'
